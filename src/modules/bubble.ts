@@ -1,16 +1,25 @@
 
 export class Bubble {
-    private x: number;
-    private y: number;
-    private size: number;
-    private xSpeed: number;
-    private ySpeed: number;
+    private x: number = 10;
+    private y: number = 10;
+    private size: number = 10;
+    private xSpeed: number = random(-3, 3);
+    private ySpeed: number = random(-3, 3);
     private stopped: boolean = false;
-    private color: string;
-    private borderColor: string;
+    private color: string = "blue";
+    private borderColor: string = "black";
 
     /* TODO REQUIRED - What's missing here? Add it! */
-
+    constructor(x: number, y: number, size: number, color = "blue", borderColor = "black") {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.xSpeed = this.xSpeed;
+        this.ySpeed = this.ySpeed;
+        this.stopped = this.stopped;
+        this.color = color;
+        this.borderColor = borderColor;
+    }
     public stop() {
         this.stopped = true;
     }

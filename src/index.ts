@@ -41,6 +41,12 @@ function setup() {
     createCanvas(500, 500);
     for (let i = 0; i < numBalls; i++/* TODO REQUIRED - fill this in*/) {
         balls[i] = new Ball(random(25, width - 25), random(25, height - 25), random(10, 50));
+    }
+    for (let i = 0; i < numBubbles; i++/* TODO REQUIRED - fill this in*/) {
+        bubbles[i] = new Bubble(random(25, width - 25), random(25, height - 25), random(10, 50));
+    }
+    for (let i = 0; i < numFlakes; i++/* TODO REQUIRED - fill this in*/) {
+        snowflakes[i] = new Snowflake();
         /* TODO OPTIONAL - make the balls a random color */
     }
 }
@@ -73,3 +79,4 @@ function draw() {
         window.mouseReleased = mouseReleased;
     }
 }
+
