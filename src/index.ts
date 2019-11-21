@@ -46,7 +46,7 @@ function setup() {
         bubbles[i] = new Bubble(random(25, width - 25), random(25, height - 25), random(10, 50));
     }
     for (let i = 0; i < numFlakes; i++/* TODO REQUIRED - fill this in*/) {
-        snowflakes[i] = new Snowflake();
+        snowflakes[i] = new Snowflake(random(25, width - 25), random(25, height - 25), random(10, 50));
         /* TODO OPTIONAL - make the balls a random color */
     }
 }
@@ -57,26 +57,27 @@ function draw() {
         balls[i].draw();
         balls[i].move(); // make one for bubbles and flakes
         // tslint:disable-next-line: no-shadowed-variable
-        for (let i = 0; i < bubbles.length; i++) {
-            bubbles[i].draw();
-            bubbles[i].move();
-            // tslint:disable-next-line: no-shadowed-variable
-            for (let i = 0; i < snowflakes.length; i++) {
-                snowflakes[i].draw();
-            }
-        }
-        /* TODO REQUIRED - Draw and move the bubbles and flakes */
-        /* TODO OPTIONAL - add a function mousePressed() that either stops or starts objects from moving
-              if the mouse is pressed while it is touching them. So you could use this (if careful!) to stop all of the
-              objects from moving then start them back up again. The Ball class has some helper functions that will
-              help you with this, but you'll need to add them to the other classes.
-           */
-
-        // do not edit the below lines
-        window.draw = draw;
-        window.setup = setup;
-        window.mousePressed = mousePressed;
-        window.mouseReleased = mouseReleased;
+    }
+    for (let i = 0; i < bubbles.length; i++) {
+        bubbles[i].draw();
+        bubbles[i].move();
+    }
+    // tslint:disable-next-line: no-shadowed-variable
+    for (let i = 0; i < snowflakes.length; i++) {
+        snowflakes[i].draw();
+        bubbles[i].move();
     }
 }
 
+/* TODO REQUIRED - Draw and move the bubbles and flakes */
+/* TODO OPTIONAL - add a function mousePressed() that either stops or starts objects from moving
+      if the mouse is pressed while it is touching them. So you could use this (if careful!) to stop all of the
+      objects from moving then start them back up again. The Ball class has some helper functions that will
+      help you with this, but you'll need to add them to the other classes.
+   */
+
+// do not edit the below lines
+window.draw = draw;
+window.setup = setup;
+window.mousePressed = mousePressed;
+window.mouseReleased = mouseReleased;

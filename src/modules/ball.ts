@@ -19,11 +19,12 @@ export class Ball {
     this.stopped = this.stopped;
     this.color = color;
     this.borderColor = borderColor;
-
-
-    /* TODO REQUIRED = Build your constructor */
-    /* TODO OPTIONAL - add optional parameters to set color and borderColor on creation of the object */
   }
+
+
+  /* TODO REQUIRED = Build your constructor */
+  /* TODO OPTIONAL - add optional parameters to set color and borderColor on creation of the object */
+
 
   public stop() {
     this.stopped = true;
