@@ -8,7 +8,7 @@ export class Snowflake {
     private color: string = "white";
     private borderColor: string = "black";
 
-    constructor(x: number, y: number, size: number, color = "blue", borderColor = "black") {
+    constructor(x: number, y: number, size: number, color = "white", borderColor = "black") {
         this.x = x;
         this.y = y;
         this.size = size;
