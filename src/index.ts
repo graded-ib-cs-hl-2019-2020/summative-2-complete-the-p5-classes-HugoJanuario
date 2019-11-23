@@ -65,7 +65,7 @@ function draw() {
     // tslint:disable-next-line: no-shadowed-variable
     for (let i = 0; i < snowflakes.length; i++) {
         snowflakes[i].draw();
-        bubbles[i].move();
+        snowflakes[i].move();
     }
 }
 

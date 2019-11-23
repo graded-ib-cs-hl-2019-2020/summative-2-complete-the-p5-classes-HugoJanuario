@@ -3,8 +3,8 @@ export class Bubble {
     private x: number = 10;
     private y: number = 10;
     private size: number = 10;
-    private xSpeed: number = random(-3, 3);
-    private ySpeed: number = random(-3, 3);
+    private xSpeed: number = random(2, 0);
+    private ySpeed: number = random(1, 1);
     private stopped: boolean = false;
     private color: string = "#FFFFFF80";
     private borderColor: string = "white";
@@ -34,7 +34,6 @@ export class Bubble {
         ellipse(this.x, this.y, this.size);
     }/* TODO REQUIRED - draw the bubbles */
 
-
     public move(): void {
         if (this.stopped == false) {
             this.x = this.xSpeed + this.x;
@@ -45,7 +44,6 @@ export class Bubble {
 
     /* TODO REQUIRED - Make the bubbles move as long as they aren't stopped. Model after ball behavior. */
     /* The doBorderBehavior is built in for you below. */
-
 
     public distFromMouse(): number {
         return dist(this.x, this.y, mouseX, mouseY);
@@ -65,4 +63,3 @@ export class Bubble {
         }
     }
 }
-

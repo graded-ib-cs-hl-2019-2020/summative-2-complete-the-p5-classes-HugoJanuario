@@ -21,10 +21,8 @@ export class Ball {
     this.borderColor = borderColor;
   }
 
-
   /* TODO REQUIRED = Build your constructor */
   /* TODO OPTIONAL - add optional parameters to set color and borderColor on creation of the object */
-
 
   public stop() {
     this.stopped = true;
