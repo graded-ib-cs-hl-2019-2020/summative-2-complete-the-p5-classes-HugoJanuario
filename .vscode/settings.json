@@ -16,7 +16,7 @@
     "tslint.json": true,
     "src\\global.d.ts": true
   },
-  "liveServer.settings.port": 3002,
+  "liveServer.settings.port": 3003,
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true
 }

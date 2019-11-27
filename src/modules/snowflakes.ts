@@ -19,11 +19,11 @@ export class Snowflake {
         this.borderColor = borderColor;
     }
     public stop() {
-        this.stopped = false; // testing false; now true at 18:26 nov 24
+        this.stopped = false;
     }
 
     public go() {
-        this.stopped = true; // testing true at 18:34 nov 23
+        this.stopped = true;
     }
     public move(): void {
         if (this.stopped == false) {

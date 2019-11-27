@@ -3,8 +3,8 @@ export class Bubble {
     private x: number = 10;
     private y: number = 10;
     private size: number = 10;
-    private xSpeed: number = random(2, 0);
-    private ySpeed: number = random(1, 1);
+    private xSpeed: number = random(0, 0);
+    private ySpeed: number = random(-3, -1);
     private stopped: boolean = false;
     private color: string = "#FFFFFF80";
     private borderColor: string = "white";
