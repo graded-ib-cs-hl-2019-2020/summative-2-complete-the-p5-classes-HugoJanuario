@@ -33,9 +33,6 @@ export class Snowflake {
 
         }
     }
-    /* TODO REQUIRED - Make this work. The snowflakes should drift slowly downward.
-    I have implemented only the draw() method.
-     You can base the rest of the behavior after bubbles, with only a few changes. */
 
     public draw(): void {
         stroke(this.color);

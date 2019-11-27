@@ -51,27 +51,26 @@ function setup() {
     let numBalls = 10;
     let numFlakes = 10;
     createCanvas(500, 500);
-    for (let i = 0; i < numBalls; i++/* TODO REQUIRED - fill this in*/) {
 
+    for (let i = 0; i < numBalls; i++) {
 
         balls[i] = (new Ball(random(25, width - 25), random(25, height - 25), random(10, 50), random_color(), "black"));
     }
-    for (let i = 0; i < numBubbles; i++/* TODO REQUIRED - fill this in*/) {
+    for (let i = 0; i < numBubbles; i++) {
         bubbles[i] = new Bubble(random(25, width - 25), random(25, height - 25), random(10, 50));
     }
-    for (let i = 0; i < numFlakes; i++/* TODO REQUIRED - fill this in*/) {
+    for (let i = 0; i < numFlakes; i++) {
         snowflakes[i] = new Snowflake(random(25, width - 25), random(25, height - 25), random(10, 50));
-        /* TODO OPTIONAL - make the balls a random color */
+        /* TODO OPTIONAL - make the balls a random color COMPLETED*/
     }
 }
 
 function draw() {
     background("skyblue");
 
-    for (let i = 0; i < balls.length; i++/* TODO REQUIRED*/) {
+    for (let i = 0; i < balls.length; i++) {
         balls[i].draw();
-        balls[i].move(); // make one for bubbles and flakes
-        // tslint:disable-next-line: no-shadowed-variable
+        balls[i].move();
     }
     for (let i = 0; i < bubbles.length; i++) {
         bubbles[i].draw();
@@ -81,10 +80,11 @@ function draw() {
     for (let i = 0; i < snowflakes.length; i++) {
         snowflakes[i].draw();
         snowflakes[i].move();
+
     }
+
 }
 
-/* TODO REQUIRED - Draw and move the bubbles and flakes */
 /* TODO OPTIONAL - add a function mousePressed() that either stops or starts objects from moving
       if the mouse is pressed while it is touching them. So you could use this (if careful!) to stop all of the
       objects from moving then start them back up again. The Ball class has some helper functions that will
