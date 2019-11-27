@@ -34,13 +34,27 @@ let snowflakes: Snowflake[] = [];
 let bubbles: Bubble[] = [];
 let clickedIndex = -1;
 
+function random(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function random_color(): string {
+    let red: number = random(0, 255);
+    let blue: number = random(0, 255);
+    let green: number = random(0, 255);
+    let randomColor = "rgb(" + red + "," + green + "," + blue + ")";
+    return randomColor;
+}
+
 function setup() {
     let numBubbles = 10;
     let numBalls = 10;
     let numFlakes = 10;
     createCanvas(500, 500);
     for (let i = 0; i < numBalls; i++/* TODO REQUIRED - fill this in*/) {
-        balls.push(new Ball(random(25, width - 25), random(25, height - 25), random(10, 50), random_color(), "black"));
+
+
+        balls[i] = (new Ball(random(25, width - 25), random(25, height - 25), random(10, 50), random_color(), "black"));
     }
     for (let i = 0; i < numBubbles; i++/* TODO REQUIRED - fill this in*/) {
         bubbles[i] = new Bubble(random(25, width - 25), random(25, height - 25), random(10, 50));
@@ -67,8 +81,6 @@ function draw() {
     for (let i = 0; i < snowflakes.length; i++) {
         snowflakes[i].draw();
         snowflakes[i].move();
-        circle(250, 450, 100);
-        circle(250, 400, 80);
     }
 }
 
@@ -84,16 +96,3 @@ window.draw = draw;
 window.setup = setup;
 window.mousePressed = mousePressed;
 window.mouseReleased = mouseReleased;
-
-function random(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function random_color(): any {
-    let red: number = random(0, 255);
-    let blue: number = random(0, 255);
-    let green: number = random(0, 255);
-    let random_color = (red + blue + green);
-    return random_color
-
-}
